@@ -5,9 +5,9 @@ use attributes ();
 	package Local::XXX;
 	use Sub::Talisman qw( WWW XXX YYY ZZZ );
 
-	sub foo :XXX(1,2,3) { ... };
-	sub bar :XXX(1) :YYY :ZZZ { ... };
-	sub baz : XXX YYY ZZZ lvalue { ... };
+	sub foo :XXX(1,2,3) { 1 };
+	sub bar :XXX(1) :YYY :ZZZ { 1 };
+	sub baz : XXX YYY ZZZ lvalue { 1 };
 }
 
 my $pkg = 'Local::XXX';
