@@ -4,3 +4,8 @@
 	issued  2012-10-19;
 	label   "Initial release".
 
+`Sub-Talisman 0.002 cpan:TOBYINK`
+	issued  2012-10-19;
+	changeset [
+		item "Drop elliptical statements (yada-yada op) from test cases, as this will fail in Perl < 5.12."^^Bugfix;
+	];

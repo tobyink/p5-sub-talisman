@@ -6,7 +6,7 @@ use warnings;
 
 BEGIN {
 	$Sub::Talisman::AUTHORITY = 'cpan:TOBYINK';
-	$Sub::Talisman::VERSION   = '0.001';
+	$Sub::Talisman::VERSION   = '0.002';
 }
 
 use Attribute::Handlers;
