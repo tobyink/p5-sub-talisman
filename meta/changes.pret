@@ -8,4 +8,4 @@
 	issued  2012-10-19;
 	changeset [
 		item "Drop elliptical statements (yada-yada op) from test cases, as this will fail in Perl < 5.12."^^Bugfix;
-	];
+	].
