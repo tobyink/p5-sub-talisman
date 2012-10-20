@@ -9,3 +9,9 @@
 	changeset [
 		item "Drop elliptical statements (yada-yada op) from test cases, as this will fail in Perl < 5.12."^^Bugfix;
 	].
+
+`Sub-Talisman 0.003 cpan:TOBYINK`
+	issued  2012-10-20;
+	changeset [
+		item "Fix lvalue sub in test cases in Perl < 5.16."^^Bugfix;
+	].

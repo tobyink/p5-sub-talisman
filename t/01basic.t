@@ -1,13 +1,14 @@
 use Test::More;
 use attributes ();
 
+my $x;
 {
 	package Local::XXX;
 	use Sub::Talisman qw( WWW XXX YYY ZZZ );
 
-	sub foo :XXX(1,2,3) { 1 };
-	sub bar :XXX(1) :YYY :ZZZ { 1 };
-	sub baz : XXX YYY ZZZ lvalue { 1 };
+	sub foo :XXX(1,2,3) { $x };
+	sub bar :XXX(1) :YYY :ZZZ { $x };
+	sub baz : XXX YYY ZZZ lvalue { $x };
 }
 
 my $pkg = 'Local::XXX';
