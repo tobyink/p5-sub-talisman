@@ -5,6 +5,7 @@
 	version_from      m`Sub::Talisman`;
 	readme_from       m`Sub::Talisman`;
 	test_requires     p`Test::More 0.61`;
+	requires          p`Attribute::Handlers 0.79`;
 	requires          p`namespace::clean`;
 	requires          p`Scalar::Does 0.002`;
 	requires          p`Sub::Identify`;
