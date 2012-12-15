@@ -87,7 +87,7 @@ sub _process_params
 
 sub _callback
 {
-	my ($class, $installation_pkg, $caller_pkg, $glob, $ref, $attr, $params, $step, $file, $line) = @_;	
+	my ($class, $installation_pkg, $caller_pkg, $glob, $ref, $attr, $params, $step, $file, $line) = @_;
 	my ($p, $n)   = _identify($ref, scalar caller);
 	my $full_attr = join q[::], $installation_pkg, $attr;
 	my $obj       = $class->_process_params($full_attr, $params);
