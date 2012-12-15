@@ -15,3 +15,9 @@
 	changeset [
 		item "Fix lvalue sub in test cases in Perl < 5.16."^^Bugfix;
 	].
+
+`Sub-Talisman 0.004 cpan:TOBYINK`
+	issued  2012-12-15;
+	changeset [
+		item "Depend on version 0.79 of Attribute::Handlers because the versions included in Perl 5.8 core fail tests."^^Packaging;
+	].
