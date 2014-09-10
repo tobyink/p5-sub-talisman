@@ -21,3 +21,10 @@
 	changeset [
 		item "Depend on version 0.79 of Attribute::Handlers because the versions included in Perl 5.8 core fail tests."^^Packaging;
 	].
+
+`Sub-Talisman 0.005 cpan:TOBYINK`
+	issued    2014-09-10;
+	changeset [
+		item "Switch to Dist::Inkt."^^Packaging;
+	].
+
