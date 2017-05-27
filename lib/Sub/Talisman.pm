@@ -10,16 +10,15 @@ BEGIN {
 }
 
 use Attribute::Handlers;
-use Sub::Identify   qw( get_code_info );
-use Sub::Name       qw( subname );
 use Scalar::Util    qw( refaddr );
+use Sub::Util       qw( subname set_subname );
 
 sub _identify
 {
 	my $sub = shift;
 	if (ref $sub)
 	{
-		my ($p, $n) = get_code_info($sub);
+		my ($p, $n) = subname($sub) =~ m/\A(.*)::([^:]+)\z/;
 		$n .= sprintf('(%d)', refaddr($sub)) if $n eq '__ANON__';
 		return ($p, $n);
 	}
@@ -59,7 +58,7 @@ sub setup_for
 	{
 		no strict 'refs';
 		my $subname = "$caller\::FETCH_CODE_ATTRIBUTES";
-		*$subname = subname $subname, sub {
+		*$subname = set_subname $subname => sub {
 			my ($class, $sub) = @_;
 			return map { /(\w+)$/ ? $1 : () }
 				__PACKAGE__->get_attributes($sub);
