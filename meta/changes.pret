@@ -28,3 +28,11 @@
 		item "Switch to Dist::Inkt."^^Packaging;
 	].
 
+`Sub-Talisman 0.006 cpan:TOBYINK`
+	issued    2017-05-27;
+	changeset [
+		item "Use Sub::Util instead of Sub::Identify and Sub::Name."^^Change;
+		item "Drop dependency on Scalar::Does."^^Change;
+		item "Skip tests if running under App::Forkprove."^^Tests;
+	].
+
