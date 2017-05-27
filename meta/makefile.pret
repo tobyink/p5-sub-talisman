@@ -4,7 +4,7 @@
 	deps:runtime-requirement         [ deps:on "Sub::Name"^^deps:CpanId ];
 	deps:runtime-requirement         [ deps:on "Attribute::Handlers 0.79"^^deps:CpanId ];
 	deps:runtime-requirement         [ deps:on "namespace::clean"^^deps:CpanId ];
-	deps:runtime-requirement         [ deps:on "Scalar::Does 0.002"^^deps:CpanId ];
+	deps:runtime-requirement         [ deps:on "perl 5.008"^^deps:CpanId ];
 	deps:runtime-requirement         [ deps:on "Sub::Identify"^^deps:CpanId ];
 	deps:test-requirement            [ deps:on "Test::More 0.61"^^deps:CpanId ].
 

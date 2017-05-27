@@ -10,15 +10,14 @@ BEGIN {
 }
 
 use Attribute::Handlers;
-use Sub::Identify qw( get_code_info );
-use Sub::Name     qw( subname );
-use Scalar::Does  qw( does -constants );
-use Scalar::Util  qw( refaddr );
+use Sub::Identify   qw( get_code_info );
+use Sub::Name       qw( subname );
+use Scalar::Util    qw( refaddr );
 
 sub _identify
 {
 	my $sub = shift;
-	if (does $sub, CODE)
+	if (ref $sub)
 	{
 		my ($p, $n) = get_code_info($sub);
 		$n .= sprintf('(%d)', refaddr($sub)) if $n eq '__ANON__';
@@ -264,7 +263,7 @@ Toby Inkster E<lt>tobyink@cpan.orgE<gt>.
 
 =head1 COPYRIGHT AND LICENCE
 
-This software is copyright (c) 2012 by Toby Inkster.
+This software is copyright (c) 2012, 2017 by Toby Inkster.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
